@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body class="bg-gray-300">
+    <div class="container mx-auto py-8 px-5">
+      <h1 class="text-3xl text-center font-bold mb-4">Weather App</h1>
+      <form
+        class="max-w-lg mx-auto mb-4 flex items-center gap-2 flex-col md:flex-row px-10"
+      >
+        <input
+          type="text"
+          class="w-full py-2 rounded-lg shadow-md focus:outline-none px-3 text-xl placeholder:text-lg"
+          placeholder="Enter Location"
+          id="inputVal"
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-10 rounded-md hover:bg-blue-700"
+        >
+          Find
+        </button>
+      </form>
+      <div
+        class="max-w-4xl bg-white rounded-lg shadow-lg mx-auto py-4 px-6 relative"
+      >
+        <h2
+          class="font-semibold text-xl mb-2 inline-block max-w-[250px] md:max-w-[400px] text-gray-600"
+        >
+          Current Weather in :  <span class="text-gray-900" id="location"></span>
+        </h2>
+        <div class="mb-4  gap-5 grid-cols-1 grid md:grid-cols-2 lg:grid-cols-4 ">
+          <div>
+            <p class="text-gray-600">Temp_C</p>
+            <p class="font-bold" id="temperature"></p>
+          </div>
+
+          <div>
+            <p class="text-gray-600">Condition</p>
+            <p class="font-bold" id="condition"></p>
+          </div>
+          <div>
+            <p class="text-gray-600">Wind</p>
+            <p class="font-bold" id="wind"></p>
+          </div>
+          <div>
+            <p class="text-gray-600">Day/Night</p>
+            <p class="font-bold" id="dayNight"></p>
+          </div>
+          <div>
+            <p class="text-gray-600">Temp_F</p>
+            <p class="font-bold" id="temp_f"></p>
+          </div>
+          <div id="iconDiv"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
